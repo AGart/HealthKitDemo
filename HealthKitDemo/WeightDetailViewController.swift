@@ -43,19 +43,17 @@ class WeightDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    override func viewDidAppear(animated: Bool) {
-        
+    override func viewDidAppear(animated: Bool)
+    {
         // Evaluate everytime the view is shown
         
         retrieveMostRecentWeightData()
         println(self.weightSamples)
-        
     }
     
     @IBAction func addWeightLabelPressed(sender: AnyObject) {
         // perform segue with identifier
     }
-
 
     
 // MARK: - Retrieve Healthstore Data
@@ -75,7 +73,11 @@ class WeightDetailViewController: UIViewController {
             var store: HealthStoreConstant = HealthStoreConstant()
             store.healthStore?.executeQuery(query)
             self.sample = results[0] as? HKQuantitySample
+            self.weightSamples = results
             self.currentWeightLabel.text = String(format:"%@", self.sample!.quantity)
+            
+            println(self.sample)
+            println(self.weightSamples)
 
     }
     
@@ -108,10 +110,30 @@ class WeightDetailViewController: UIViewController {
     }
         */
     
-    
-    
-    
-    
+// MARK: - Handle Weight Data Statistics
+        
+//        func defaultSource() -> HKSource!
+//        {
+//            
+//        }
+//
+//        var stats: HKStatistics = HKStatistics()
+//        
+//        var avgResult: HKQuantity
+//        
+//        stats.averageQuantity()
+        
+        
+        
+//        struct HKStatisticsOptions : RawOptionSetType {
+//            init(_ value: UInt)
+//            var value: UInt
+//            var None: HKStatisticsOptions
+//            var SeparateBySource: HKStatisticsOptions
+//            var DiscreteAverage: HKStatisticsOptions
+//            var DiscreteMin: HKStatisticsOptions
+//            var DiscreteMax: HKStatisticsOptions
+//        }
     
     
     
@@ -126,7 +148,7 @@ class WeightDetailViewController: UIViewController {
     
     }
 }
-        
+
     
         
 

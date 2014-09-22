@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RunTrackerViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let navigationController: UINavigationController = self.window?.rootViewController
-        
-        let controller: ViewController = navigationController.topViewController
-        controller.managedObjectContext = self.managedObjectContext
+//        let navigationController: UINavigationController = self.window?.rootViewController
+//        
+//        let controller: ViewController = navigationController.topViewController
+//        controller.managedObjectContext = self.managedObjectContext
         
         return true
     }

@@ -43,7 +43,7 @@ class AddWeightViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
 
     /*
-    // MARK: - Navigation
+// MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
@@ -108,7 +108,6 @@ class AddWeightViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                                  startDate: addWeightDatePicker.date,
                                    endDate: addWeightDatePicker.date)
         println("The weight of \(weightValue) was saved for the date: \(addWeightDatePicker.date)")
-
         return sample
     }
 

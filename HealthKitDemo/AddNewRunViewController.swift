@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class AddNewRunViewController: UIViewController {
 
@@ -25,20 +26,32 @@ class AddNewRunViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+    }
+// MARK: - Helper Methods
+
+    func newRunSampleForDistance(Double, time: NSDate, startDate: NSDate, endDate: NSDate) ->HKQuantitySample
+    {
+        
+        
+        
     }
     
 
-    @IBAction func startRunButtonPressed(sender: AnyObject) {
+    @IBAction func startRunButtonPressed(sender: AnyObject)
+    {
         
         
     }
     
-    @IBAction func stopRunButtonPressed(sender: AnyObject) {
+    @IBAction func stopRunButtonPressed(sender: AnyObject)
+    {
         
         
     }
     
-    @IBAction func saveRunButtonPressed(sender: AnyObject) {
+    @IBAction func saveRunButtonPressed(sender: AnyObject)
+    {
         
         
     }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import HealthKit
 
-class RunTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAction {
+class RunTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     let detailRunSegue: String = "runDetails"
     
@@ -41,6 +42,15 @@ class RunTrackerViewController: UIViewController, UITableViewDataSource, UITable
     }
     */
 
+    // MARK: - Run Methods
+    
+    func newRunCreationFunction()
+    {
+        
+    }
+
+    
+    
     // MARK: - TableView Methods
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
