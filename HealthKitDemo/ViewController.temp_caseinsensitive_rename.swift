@@ -8,46 +8,44 @@
 
 import UIKit
 import HealthKit
-import CoreData
 
 class ViewController: UIViewController {
-    
-    // Core Data Declaration
-    let managedObjectContext: NSManagedObjectContext?
 
-    // Background Image View
-    @IBOutlet var backgroundImageView: UIImageView!
-    
-    // Declare our Button Outlets
     @IBOutlet var WeightTrackerButton: UIButton!
     @IBOutlet var RunTrackerButton: UIButton!
+    
+    var healthStore: HKHealthStore?
+    
+    var weight: HKUnit
+    let weight = HKQuantity(unit: HKUnit(fromString: "lbs"), doubleValue: weight)
+    
+    var weightQuantity: HKQuantity
+    
+    
+    
+    
+    let weightType = HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
+    let weightValue = HKQuantity(unit: HKUnit(fromString: "lbs"), doubleValue: massNumber)
+    let metadata = [ HKMetadataKeyWasUserEntered : true ]
+    let sample = HKQuantitySample(type: weightType, quantity: weightValue,
+        startDate: datePicker.date, endDate: datePicker.date, metadata: metadata)
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        backgroundImageView.image = UIImage(named:"road.jpg")
-        backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
-        
-        requestAuthorizationForHealthStore()
-
+        requestAuthorisationForHealthStore()
         
     }
 
-    override func viewDidAppear(animated: Bool) {
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//MARK: - HealthStore Authorization
-    
-    func requestAuthorizationForHealthStore()
+
+
+    func requestAuthorisationForHealthStore()
     {
-        println("Authorization is being called")
         let dataTypesToWrite = [
             HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         ]
@@ -55,14 +53,14 @@ class ViewController: UIViewController {
             HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass),
         ]
         
-        var store: HealthStoreConstant = HealthStoreConstant()
-        
-        store.healthStore?.requestAuthorizationToShareTypes(NSSet(array: dataTypesToWrite),
-            readTypes: NSSet(array: dataTypesToRead), completion: { (success, error) in
+        self.healthStore?.requestAuthorizationToShareTypes(NSSet(array: dataTypesToWrite),
+            readTypes: NSSet(array: dataTypesToRead), completion:
+            {
+                (success, error) in
                 if success {
                     println("User completed authorization request.")
                 } else {
-                    println("The user cancelled the authorization request. \(error)")
+                    println("The user cancelled the authorisation request. \(error)")
                 }
         })
     }

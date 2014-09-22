@@ -14,6 +14,14 @@
 		795A5CA619CB77D600BAA560 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 795A5CA519CB77D600BAA560 /* Images.xcassets */; };
 		795A5CA919CB77D600BAA560 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 795A5CA719CB77D600BAA560 /* LaunchScreen.xib */; };
 		795A5CB519CB77D600BAA560 /* HealthKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A5CB419CB77D600BAA560 /* HealthKitDemoTests.swift */; };
+		795A5CC019CB780000BAA560 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795A5CBF19CB780000BAA560 /* HealthKit.framework */; };
+		795A5CCA19CB9EAE00BAA560 /* WeightDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A5CC919CB9EAE00BAA560 /* WeightDetailViewController.swift */; };
+		795A5CCC19CB9EC100BAA560 /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A5CCB19CB9EC100BAA560 /* AddWeightViewController.swift */; };
+		79657E5519CCFA2100230C5F /* RunTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5419CCFA2100230C5F /* RunTrackerViewController.swift */; };
+		79657E5919CEBC9D00230C5F /* AddNewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5819CEBC9D00230C5F /* AddNewRunViewController.swift */; };
+		79657E5E19CF76E700230C5F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5D19CF76E700230C5F /* GraphView.swift */; };
+		79657E6019CF8A9D00230C5F /* road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79657E5F19CF8A9D00230C5F /* road.jpg */; };
+		79657E6419CFBDC000230C5F /* HealthStoreConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E6319CFBDC000230C5F /* HealthStoreConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,15 @@
 		795A5CAE19CB77D600BAA560 /* HealthKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		795A5CB319CB77D600BAA560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795A5CB419CB77D600BAA560 /* HealthKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitDemoTests.swift; sourceTree = "<group>"; };
+		795A5CBE19CB77FF00BAA560 /* HealthKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthKitDemo.entitlements; sourceTree = "<group>"; };
+		795A5CBF19CB780000BAA560 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		795A5CC919CB9EAE00BAA560 /* WeightDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightDetailViewController.swift; sourceTree = "<group>"; };
+		795A5CCB19CB9EC100BAA560 /* AddWeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
+		79657E5419CCFA2100230C5F /* RunTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTrackerViewController.swift; sourceTree = "<group>"; };
+		79657E5819CEBC9D00230C5F /* AddNewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRunViewController.swift; sourceTree = "<group>"; };
+		79657E5D19CF76E700230C5F /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		79657E5F19CF8A9D00230C5F /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = road.jpg; path = "../../../../Desktop/HealthKitDemo Assets/road.jpg"; sourceTree = "<group>"; };
+		79657E6319CFBDC000230C5F /* HealthStoreConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthStoreConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795A5CC019CB780000BAA560 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +79,7 @@
 		795A5C8D19CB77D600BAA560 = {
 			isa = PBXGroup;
 			children = (
+				795A5CBF19CB780000BAA560 /* HealthKit.framework */,
 				795A5C9819CB77D600BAA560 /* HealthKitDemo */,
 				795A5CB119CB77D600BAA560 /* HealthKitDemoTests */,
 				795A5C9719CB77D600BAA560 /* Products */,
@@ -79,9 +98,14 @@
 		795A5C9819CB77D600BAA560 /* HealthKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				795A5CBE19CB77FF00BAA560 /* HealthKitDemo.entitlements */,
 				795A5C9B19CB77D600BAA560 /* AppDelegate.swift */,
 				795A5CA019CB77D600BAA560 /* ViewController.swift */,
 				795A5CA219CB77D600BAA560 /* Main.storyboard */,
+				79657E6319CFBDC000230C5F /* HealthStoreConstant.swift */,
+				795A5CC319CB7D1300BAA560 /* WeightTracker */,
+				795A5CC419CB7D1C00BAA560 /* RunTracker */,
+				79657E5C19CF769000230C5F /* Graph */,
 				795A5CA519CB77D600BAA560 /* Images.xcassets */,
 				795A5CA719CB77D600BAA560 /* LaunchScreen.xib */,
 				795A5C9D19CB77D600BAA560 /* HealthKitDemo.xcdatamodeld */,
@@ -93,6 +117,7 @@
 		795A5C9919CB77D600BAA560 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				79657E5F19CF8A9D00230C5F /* road.jpg */,
 				795A5C9A19CB77D600BAA560 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +138,32 @@
 				795A5CB319CB77D600BAA560 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		795A5CC319CB7D1300BAA560 /* WeightTracker */ = {
+			isa = PBXGroup;
+			children = (
+				795A5CC919CB9EAE00BAA560 /* WeightDetailViewController.swift */,
+				795A5CCB19CB9EC100BAA560 /* AddWeightViewController.swift */,
+			);
+			name = WeightTracker;
+			sourceTree = "<group>";
+		};
+		795A5CC419CB7D1C00BAA560 /* RunTracker */ = {
+			isa = PBXGroup;
+			children = (
+				79657E5419CCFA2100230C5F /* RunTrackerViewController.swift */,
+				79657E5819CEBC9D00230C5F /* AddNewRunViewController.swift */,
+			);
+			name = RunTracker;
+			sourceTree = "<group>";
+		};
+		79657E5C19CF769000230C5F /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				79657E5D19CF76E700230C5F /* GraphView.swift */,
+			);
+			name = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +215,12 @@
 				TargetAttributes = {
 					795A5C9519CB77D600BAA560 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = Q92BZ3P34J;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					795A5CAD19CB77D600BAA560 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -198,6 +255,7 @@
 				795A5CA419CB77D600BAA560 /* Main.storyboard in Resources */,
 				795A5CA919CB77D600BAA560 /* LaunchScreen.xib in Resources */,
 				795A5CA619CB77D600BAA560 /* Images.xcassets in Resources */,
+				79657E6019CF8A9D00230C5F /* road.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +273,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79657E5919CEBC9D00230C5F /* AddNewRunViewController.swift in Sources */,
 				795A5CA119CB77D600BAA560 /* ViewController.swift in Sources */,
+				79657E5E19CF76E700230C5F /* GraphView.swift in Sources */,
+				79657E6419CFBDC000230C5F /* HealthStoreConstant.swift in Sources */,
 				795A5C9C19CB77D600BAA560 /* AppDelegate.swift in Sources */,
+				795A5CCA19CB9EAE00BAA560 /* WeightDetailViewController.swift in Sources */,
 				795A5C9F19CB77D600BAA560 /* HealthKitDemo.xcdatamodeld in Sources */,
+				795A5CCC19CB9EC100BAA560 /* AddWeightViewController.swift in Sources */,
+				79657E5519CCFA2100230C5F /* RunTrackerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -352,9 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthKitDemo/HealthKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HealthKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -411,6 +483,7 @@
 				795A5CBA19CB77D600BAA560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		795A5CBB19CB77D600BAA560 /* Build configuration list for PBXNativeTarget "HealthKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +492,7 @@
 				795A5CBD19CB77D600BAA560 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

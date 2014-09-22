@@ -7,16 +7,20 @@
 //
 
 import UIKit
-import CoreData
+import RunTrackerViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navigationController: UINavigationController = self.window?.rootViewController
+        
+        let controller: ViewController = navigationController.topViewController
+        controller.managedObjectContext = self.managedObjectContext
+        
         return true
     }
 
