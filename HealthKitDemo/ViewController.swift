@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         
         requestAuthorizationForHealthStore()
 
-        
     }
 
     override func viewDidAppear(animated: Bool) {

@@ -9,17 +9,29 @@
 //import UIKit
 //import HealthKit
 //
+//
+//
 //class GraphView: UIView {
 //    
-//        override func drawRect(rect: CGRect) {
+//    //Create a custom initializer where you pass in the weightQuantity in LBs
+//    var weightQuantityInLbs:Double = 0.1
+//    
+//    //Update min
+//    let min: Double = 0.1
+//    
+//    override func drawRect(rect: CGRect) {
 //            
 //            if mornings != nil && evenings != nil {
 //                drawGraphFor(mornings, withColor: UIColor.redColor().colorWithAlphaComponent(0.5))
 //                drawGraphFor(evenings, withColor: UIColor.redColor())
 //                
 //                let font = UIFont.systemFontOfSize(10)
-//                let minText = NSString.stringWithFormat("%0.1f%@", min, MainViewController.weightUnit.unitString)
-//                UIColor.grayColor.`set`()
+//                
+//                
+//                //FIX MIN I don't know where this is being defined.
+//                
+//                let minText = "\(min) \(weightQuantityInLbs)"
+//                UIColor.grayColor.set()
 //                let minSize = minText.sizeWithFont(font)
 //                minText.drawAtPoint(CGPointMake(startX, endY/*-minSize.height*/), withFont:font)
 //                
@@ -112,19 +124,19 @@
 //        var mornings: NSArray!
 //        var evenings: NSArray!
 //        
-//        private var startX: CGFloat
-//        private var startY: CGFloat
-//        private var offsetX: CGFloat
-//        private var endY: CGFloat
-//        private var endX: CGFloat
+//        private var startX: CGFloat!
+//        private var startY: CGFloat!
+//        private var offsetX: CGFloat!
+//        private var endY: CGFloat!
+//        private var endX: CGFloat!
 //        
 //        let FRAME_SIZE = 20
 //        let CIRCLE_SIZE = 2.5
 //        
-//        private var min: CGFloat
-//        private var max: CGFloat
-//        private var sizeX: CGFloat
-//        private var sizeY: CGFloat
+//        private var min: CGFloat!
+//        private var max: CGFloat!
+//        private var sizeX: CGFloat!
+//        private var sizeY: CGFloat!
 //        
 //        public func dataChanged() {
 //            if mornings?.count > 0 {
@@ -156,4 +168,5 @@
 //            }
 //            setNeedsDisplay()
 //        }
+//}
 //}

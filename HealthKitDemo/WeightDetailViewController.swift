@@ -20,11 +20,11 @@ class WeightDetailViewController: UIViewController {
     
     var weightSamples: [AnyObject?] = []
     var sample: HKQuantitySample?
+    var weightQuantityInLbs:Double!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        println(self.weightSamples)
         
     }
 
@@ -47,8 +47,9 @@ class WeightDetailViewController: UIViewController {
     {
         // Evaluate everytime the view is shown
         
-        retrieveMostRecentWeightData()
-        println(self.weightSamples)
+        var query: HKSampleQuery = setupQueryForMostRecentData()
+        var store: HealthStoreConstant = HealthStoreConstant()
+        store.healthStore?.executeQuery(query)
     }
     
     @IBAction func addWeightLabelPressed(sender: AnyObject) {
@@ -58,30 +59,24 @@ class WeightDetailViewController: UIViewController {
     
 // MARK: - Retrieve Healthstore Data
     
-    func retrieveMostRecentWeightData() {
-        
+    func setupQueryForMostRecentData() -> HKSampleQuery
+    {
         let weightSampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)
         var endKey: String = HKSampleSortIdentifierEndDate
         
         var endDate: NSSortDescriptor = NSSortDescriptor(key: endKey, ascending: false)
+        
         var query: HKSampleQuery = HKSampleQuery(sampleType: weightSampleType, predicate: nil, limit: 1, sortDescriptors: [endDate]) {
             (query, results, error) -> Void in
-            for result in results as [HKQuantitySample]! {
-                println(results)
+            if results.count == 1 {
+                var result: HKQuantitySample = results[0] as HKQuantitySample
+                self.weightQuantityInLbs = result.quantity.doubleValueForUnit(HKUnit(fromString: "lb"))
+                self.currentWeightLabel.text = String(format: "%.1f lbs", self.weightQuantityInLbs)
+            }
         }
-            
-            var store: HealthStoreConstant = HealthStoreConstant()
-            store.healthStore?.executeQuery(query)
-            self.sample = results[0] as? HKQuantitySample
-            self.weightSamples = results
-            self.currentWeightLabel.text = String(format:"%@", self.sample!.quantity)
-            
-            println(self.sample)
-            println(self.weightSamples)
-
+        return query
     }
-    
-    
+}
  /*   func retrieveWeightData()
     {
         
@@ -135,21 +130,7 @@ class WeightDetailViewController: UIViewController {
 //            var DiscreteMax: HKStatisticsOptions
 //        }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    }
-}
 
-    
         
 
         

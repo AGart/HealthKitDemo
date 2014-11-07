@@ -33,8 +33,8 @@ class AddNewRunViewController: UIViewController {
     func newRunSampleForDistance(Double, time: NSDate, startDate: NSDate, endDate: NSDate) ->HKQuantitySample
     {
         
-        
-        
+        var thing: HKQuantitySample = HKQuantitySample()
+        return thing
     }
     
 

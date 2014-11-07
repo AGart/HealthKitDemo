@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class DataGraphView: UIView {
 
@@ -18,5 +19,10 @@ class DataGraphView: UIView {
         // Drawing code
     }
     */
+    
+    
+    
+    
+    
 
 }

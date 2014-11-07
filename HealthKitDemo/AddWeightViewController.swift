@@ -9,7 +9,7 @@
 import UIKit
 import HealthKit
 
-class AddWeightViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddWeightViewController: UIViewController /*, UIPickerViewDelegate, UIPickerViewDataSource*/ {
 
     // Weight Entered
     @IBOutlet var addWeightTextField: UITextField!
@@ -29,8 +29,8 @@ class AddWeightViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         super.viewDidLoad()
         
         // Set Picker View Delegate and Data Source as Self
-        weightUnitPickerView.delegate = self
-        weightUnitPickerView.dataSource = self
+//        weightUnitPickerView.delegate = self
+//        weightUnitPickerView.dataSource = self
         
         //addWeightTextField.keyboardType = UIKeyboardType.DecimalPad
         weightUnitPickerView.hidden = true
@@ -113,37 +113,37 @@ class AddWeightViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
 // MARK: - UIPickerView
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
-    {
-        // # of Rows in PickerView
-        return weightUnitTypes.count // 3
-    }
-    
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
-    {
-        // # of Columns in PickerView
-        return 1
-    }
-
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
-    {
-        return weightUnitTypes[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
-    {
-        switch(row)
-            {
-        case 0:
-            selectedUnit = HKUnit(fromString: "lb")
-        case 1:
-            selectedUnit = HKUnit(fromString: "kg")
-        case 2:
-            selectedUnit = HKUnit(fromString: "st")
-        default:
-            selectedUnit = HKUnit(fromString: "lb")
-        }
-    }
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+//    {
+//        // # of Rows in PickerView
+//        return weightUnitTypes.count // 3
+//    }
+//    
+//    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+//    {
+//        // # of Columns in PickerView
+//        return 1
+//    }
+//
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String!
+//    {
+//        return weightUnitTypes[row]
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+//    {
+//        switch(row)
+//            {
+//        case 0:
+//            selectedUnit = HKUnit(fromString: "lb")
+//        case 1:
+//            selectedUnit = HKUnit(fromString: "kg")
+//        case 2:
+//            selectedUnit = HKUnit(fromString: "st")
+//        default:
+//            selectedUnit = HKUnit(fromString: "lb")
+//        }
+//    }
 }
 
 

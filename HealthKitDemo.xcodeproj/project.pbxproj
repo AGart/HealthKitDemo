@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791C58B619D1119900FEC75A /* DataGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791C58B519D1119900FEC75A /* DataGraphView.swift */; };
 		795A5C9C19CB77D600BAA560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A5C9B19CB77D600BAA560 /* AppDelegate.swift */; };
 		795A5C9F19CB77D600BAA560 /* HealthKitDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 795A5C9D19CB77D600BAA560 /* HealthKitDemo.xcdatamodeld */; };
 		795A5CA119CB77D600BAA560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A5CA019CB77D600BAA560 /* ViewController.swift */; };
@@ -20,7 +21,6 @@
 		79657E5519CCFA2100230C5F /* RunTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5419CCFA2100230C5F /* RunTrackerViewController.swift */; };
 		79657E5919CEBC9D00230C5F /* AddNewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5819CEBC9D00230C5F /* AddNewRunViewController.swift */; };
 		79657E5E19CF76E700230C5F /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E5D19CF76E700230C5F /* GraphView.swift */; };
-		79657E6019CF8A9D00230C5F /* road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79657E5F19CF8A9D00230C5F /* road.jpg */; };
 		79657E6419CFBDC000230C5F /* HealthStoreConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79657E6319CFBDC000230C5F /* HealthStoreConstant.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		791C58B519D1119900FEC75A /* DataGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGraphView.swift; sourceTree = "<group>"; };
 		795A5C9619CB77D600BAA560 /* HealthKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		795A5C9A19CB77D600BAA560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795A5C9B19CB77D600BAA560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		79657E5419CCFA2100230C5F /* RunTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTrackerViewController.swift; sourceTree = "<group>"; };
 		79657E5819CEBC9D00230C5F /* AddNewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewRunViewController.swift; sourceTree = "<group>"; };
 		79657E5D19CF76E700230C5F /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
-		79657E5F19CF8A9D00230C5F /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = road.jpg; path = "../../../../Desktop/HealthKitDemo Assets/road.jpg"; sourceTree = "<group>"; };
 		79657E6319CFBDC000230C5F /* HealthStoreConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthStoreConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +117,6 @@
 		795A5C9919CB77D600BAA560 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				79657E5F19CF8A9D00230C5F /* road.jpg */,
 				795A5C9A19CB77D600BAA560 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +160,7 @@
 		79657E5C19CF769000230C5F /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				791C58B519D1119900FEC75A /* DataGraphView.swift */,
 				79657E5D19CF76E700230C5F /* GraphView.swift */,
 			);
 			name = Graph;
@@ -255,7 +255,6 @@
 				795A5CA419CB77D600BAA560 /* Main.storyboard in Resources */,
 				795A5CA919CB77D600BAA560 /* LaunchScreen.xib in Resources */,
 				795A5CA619CB77D600BAA560 /* Images.xcassets in Resources */,
-				79657E6019CF8A9D00230C5F /* road.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +279,7 @@
 				795A5C9C19CB77D600BAA560 /* AppDelegate.swift in Sources */,
 				795A5CCA19CB9EAE00BAA560 /* WeightDetailViewController.swift in Sources */,
 				795A5C9F19CB77D600BAA560 /* HealthKitDemo.xcdatamodeld in Sources */,
+				791C58B619D1119900FEC75A /* DataGraphView.swift in Sources */,
 				795A5CCC19CB9EC100BAA560 /* AddWeightViewController.swift in Sources */,
 				79657E5519CCFA2100230C5F /* RunTrackerViewController.swift in Sources */,
 			);
